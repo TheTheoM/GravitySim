@@ -1,9 +1,8 @@
-import sys, pygame, random
-import turtle, time, array, math, itertools
-
+import sys, pygame, random, turtle, time, array, math, itertools
 
 
 def FillBlack_And_ExitLogic() -> None:
+    """Fills the Screen with black to cover up old drawn items. ALso Allows Alt-F4 to work."""
     screen.fill((0,0,0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
@@ -146,10 +145,11 @@ def RenderLoopBasic(UpdatesPerSec) -> None:
     global Body_Dict
     Body_Dict = {}
     global size
-    size = 1920, 1080
+    size = 1920, 1000
     pygame.init()
     global screen
     screen = pygame.display.set_mode(size)
+    screeen = pygame.display.set_caption('Gravity Simulator')
 
     last_second = 0
     interval = 1 / UpdatesPerSec
@@ -248,6 +248,5 @@ def RenderLoopBasic(UpdatesPerSec) -> None:
 
 if __name__ == "__main__":
     RenderLoopBasic(100)
-
 
 
