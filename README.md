@@ -6,3 +6,5 @@ The Program runs of changes to a Dictionary called Body_Dict with the key being 
 To Add a Body to the dictionary, use:
 - Add_Body_Object: 
   Body_Dict = Add_Body_Object(mass, radius, position, color, velocity, InitialVelocity, Body_Dict, fixed, name)
+
+![image](https://user-images.githubusercontent.com/103237702/205470523-e83fa8f8-bbf9-4d1d-8e06-e1d43f98e9ce.png)
