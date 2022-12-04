@@ -8,7 +8,7 @@ def FillBlack_And_ExitLogic() -> None:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
 
-def Add_Body_Object(mass: float, radius: int, position: array, color: tuple, velocity: array, InitialVelocity: array, Body_Dict: array, fixed: bool, name: str) -> dict: 
+def Add_Body_Object(mass: float, radius: int, position: array, color: tuple, velocity: array, InitialVelocity: array, Body_Dict: dict, fixed: bool, name: str) -> dict: 
     """Creates Class Body object and appends it to Body_Dict"""
     temp = Body(name = name,mass =  mass, radius = radius, position = [position[0], position[1]], color = color,  velocity = [velocity[0],velocity[1]], InitialVelocity = [velocity[0],velocity[1]], fixed=fixed)
     Body_Dict[name] = temp
